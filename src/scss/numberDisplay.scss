@@ -1,12 +1,19 @@
-.displayName{
-  font-size:0.7rem;
+.displayName {
+  font-size: 0.7rem;
+}
+
+@font-face {
+  font-family: "Digital";
+  src: url("../styles/font/digital-7.woff");
 }
 
 .numberDisplay {
   width: 80px;
   height: 48px;
-  color: #ff0701;
+  line-height:48px;
+  color: white;
   background: black;
-  text-align:center;
-  font-size:40px;
+  text-align: center;
+  font-size: 40px;
+  font-family: "Digital";
 }

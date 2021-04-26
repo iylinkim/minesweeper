@@ -1,4 +1,5 @@
 import { useHistory } from "react-router";
+import "scss/home.scss";
 // import { getLevel, LEVEL_NUM, MAX_COLS } from "../constants";
 
 const Home: React.FC = () => {
@@ -16,15 +17,17 @@ const Home: React.FC = () => {
   const onClick = () => history.push("/play");
 
   return (
-    <>
+    <div className='home'>
       <h1>Start game</h1>
-      <button onClick={onClick}>Start</button>
+      <button onClick={onClick} className="startBtn">
+        Start
+      </button>
       {/* <ul>
         <li onClick={handleLevel}>Beginner</li>
         <li onClick={handleLevel}>Intermediate</li>
         <li onClick={handleLevel}>Expert</li>
       </ul> */}
-    </>
+    </div>
   );
 };
 

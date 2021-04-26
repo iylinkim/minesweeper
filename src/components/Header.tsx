@@ -33,7 +33,7 @@ const Header: React.FC<HeaderProps> = ({
   };
 
   return (
-    <>
+    <div>
       <div className="header">
         <NumberDisplay value={bombCounter} name="bombCounter" />
         <div className="face" onClick={handleFaceClick}>
@@ -41,7 +41,7 @@ const Header: React.FC<HeaderProps> = ({
         </div>
         <NumberDisplay value={time} name="time" />
       </div>
-    </>
+    </div>
   );
 };
 

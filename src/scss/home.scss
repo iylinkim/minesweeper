@@ -1,0 +1,17 @@
+.home{
+    text-align:center;
+}
+
+.startBtn{
+    padding:10px 20px;
+    border-radius:3px;
+    margin:0 auto;
+    border:none;
+    background-color:#5fa596;
+    cursor:pointer;
+    box-shadow: 0 0 5px rgba(0,0,0,0.15);
+}
+
+.startBtn:hover{
+    transform: scale(0.95);
+}

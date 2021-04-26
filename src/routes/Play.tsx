@@ -184,7 +184,10 @@ const Play: React.FC = () => {
 
   return (
     <>
-      <h1 className='title'>Minesweeper</h1>
+      <h1 className="title">Minesweeper</h1>
+      <div className="gameState">
+        {getGameState(face)}
+      </div>
       <div className="app">
         <Header
           bombCounter={bombCounter}
@@ -203,3 +206,16 @@ const Play: React.FC = () => {
 };
 
 export default Play;
+
+function getGameState(gameState: Face) {
+  switch (gameState) {
+    case Face.oh:
+      return "Game in progress";
+    case Face.smile:
+      return "Game in progress";
+    case Face.won:
+      return "You won!";
+    case Face.lost:
+      return "You lost!";
+  }
+}
