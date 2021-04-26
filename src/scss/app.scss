@@ -6,6 +6,10 @@
   padding: 16px;
 }
 
+.title{
+  text-align:center;
+}
+
 .header {
   @include borders(#7b7b7b, white);
   background-color: #c0c0c0;

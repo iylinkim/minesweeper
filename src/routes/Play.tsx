@@ -4,8 +4,7 @@ import "scss/app.scss";
 import { Cell, CellState, CellValue, Face } from "types";
 import { generateCells, openMultipleCells } from "utils";
 import Button from "components/Button";
-import NumberDisplay from "components/NumberDisplay";
-
+import Header from "components/Header";
 
 const Play: React.FC = () => {
   const [cells, setCells] = useState<Cell[][]>(generateCells());
@@ -15,6 +14,15 @@ const Play: React.FC = () => {
   const [bombCounter, setBombCounter] = useState<number>(10);
   const [hasLost, setHasLost] = useState<boolean>(false);
   const [hasWon, setHasWon] = useState<boolean>(false);
+
+  useEffect(() => {
+    // const location_state = location.state;
+    // if(location_state !== undefined ){
+    //    setCellNum(location_state);
+    // }else{
+    //   history.push("/")
+    // }
+  }, []);
 
   useEffect(() => {
     const handleMouseDown = (): void => setFace(Face.oh);
@@ -57,7 +65,6 @@ const Play: React.FC = () => {
     //start the game
     if (!live) {
       while (currentCell.value === CellValue.bomb) {
-        console.log("hit a bomb", currentCell);
         newCells = generateCells();
         currentCell = newCells[rowParam][colParam];
       }
@@ -140,14 +147,6 @@ const Play: React.FC = () => {
     }
   };
 
-  const handleFaceClick = (): void => {
-    setLive(false);
-    setTime(0);
-    setCells(generateCells());
-    setHasLost(false);
-    setHasWon(false);
-  };
-
   const renderCells = (): React.ReactNode => {
     return cells.map((row, rowIndex) =>
       row.map((cell, colIndex) => (
@@ -178,17 +177,25 @@ const Play: React.FC = () => {
     );
   };
 
+  // const gridStyle:React.CSSProperties = {
+  //   gridTemplateRows:`repeat(${MAX_ROWS}, 1fr)`,
+  //   gridTemplateColumns:`repeat(${MAX_ROWS}, 1fr)`,
+  // }
+
   return (
     <>
-      <h1>Minesweeper</h1>
+      <h1 className='title'>Minesweeper</h1>
       <div className="app">
-        <div className="header">
-          <NumberDisplay value={bombCounter} />
-          <div className="face" onClick={handleFaceClick}>
-            <span role="img">{face}</span>
-          </div>
-          <NumberDisplay value={time} />
-        </div>
+        <Header
+          bombCounter={bombCounter}
+          face={face}
+          time={time}
+          setLive={setLive}
+          setTime={setTime}
+          setCells={setCells}
+          setHasLost={setHasLost}
+          setHasWon={setHasWon}
+        />
         <div className="body">{renderCells()}</div>
       </div>
     </>

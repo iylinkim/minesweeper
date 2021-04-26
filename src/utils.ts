@@ -5,7 +5,7 @@ import { MAX_COLS, MAX_ROWS, NO_OF_BOMBS } from "./constants";
 const grabAllAdjacentCells = (
   cells: Cell[][],
   rowParam: number,
-  colParam: number
+  colParam: number 
 ): {
   topLeftCell: Cell | null;
   topCell: Cell | null;

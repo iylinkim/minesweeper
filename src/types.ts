@@ -1,3 +1,5 @@
+export type Level = "Beginner" | "Intermediate" | "Expert";
+
 export enum CellValue {
   none,
   one,
