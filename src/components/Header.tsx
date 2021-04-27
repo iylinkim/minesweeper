@@ -12,6 +12,7 @@ interface HeaderProps {
   setCells: Dispatch<SetStateAction<Cell[][]>>;
   setHasLost: Dispatch<SetStateAction<boolean>>;
   setHasWon: Dispatch<SetStateAction<boolean>>;
+  setBombCounter: Dispatch<SetStateAction<number>>;
 }
 
 const Header: React.FC<HeaderProps> = ({
@@ -23,6 +24,7 @@ const Header: React.FC<HeaderProps> = ({
   setCells,
   setHasLost,
   setHasWon,
+  setBombCounter
 }) => {
   const handleFaceClick = (): void => {
     setLive(false);
@@ -30,6 +32,7 @@ const Header: React.FC<HeaderProps> = ({
     setCells(generateCells());
     setHasLost(false);
     setHasWon(false);
+    setBombCounter(0)
   };
 
   return (

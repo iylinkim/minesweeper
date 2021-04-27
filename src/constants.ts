@@ -1,5 +1,3 @@
-import { Level } from "types";
-
 export const getLevel = (level: string | "Beginner"): number => {
   switch (level) {
     case "Beginner":

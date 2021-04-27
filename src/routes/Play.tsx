@@ -16,15 +16,6 @@ const Play: React.FC = () => {
   const [hasWon, setHasWon] = useState<boolean>(false);
 
   useEffect(() => {
-    // const location_state = location.state;
-    // if(location_state !== undefined ){
-    //    setCellNum(location_state);
-    // }else{
-    //   history.push("/")
-    // }
-  }, []);
-
-  useEffect(() => {
     const handleMouseDown = (): void => setFace(Face.oh);
     const handleMouseUp = (): void => setFace(Face.smile);
 
@@ -71,9 +62,7 @@ const Play: React.FC = () => {
       setLive(true);
     }
 
-    if ([CellState.flagged, CellState.visible].includes(currentCell.state)) {
-      return;
-    }
+    if ([CellState.flagged, CellState.visible].includes(currentCell.state)) return;
 
     if (currentCell.value === CellValue.bomb) {
       // click the bomb
@@ -82,6 +71,7 @@ const Play: React.FC = () => {
       newCells = showAllBombs();
       setCells(newCells);
       return;
+      
     } else if (currentCell.value === CellValue.none) {
       newCells = openMultipleCells(newCells, rowParam, colParam);
     } else {
@@ -177,17 +167,10 @@ const Play: React.FC = () => {
     );
   };
 
-  // const gridStyle:React.CSSProperties = {
-  //   gridTemplateRows:`repeat(${MAX_ROWS}, 1fr)`,
-  //   gridTemplateColumns:`repeat(${MAX_ROWS}, 1fr)`,
-  // }
-
   return (
     <>
       <h1 className="title">Minesweeper</h1>
-      <div className="gameState">
-        {getGameState(face)}
-      </div>
+      <div className="gameState">{getGameState(face)}</div>
       <div className="app">
         <Header
           bombCounter={bombCounter}
@@ -198,6 +181,7 @@ const Play: React.FC = () => {
           setCells={setCells}
           setHasLost={setHasLost}
           setHasWon={setHasWon}
+          setBombCounter={setBombCounter}
         />
         <div className="body">{renderCells()}</div>
       </div>

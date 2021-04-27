@@ -1,4 +1,4 @@
-@import "styles/common.scss";
+@import "scss/common.scss";
 
 .button {
   @include borders;
@@ -10,12 +10,12 @@
   justify-content: center;
 
   &.visible {
-    border-color: #7b7b7b;
+    border-color: $borderDark;
     border-width: 1px;
   }
 
   &.red {
-    background-color: red;
+    background-color: $red;
   }
 
   span {
@@ -23,27 +23,27 @@
   }
 
   &.value-1 {
-    color: blue;
+    color: $blue;
   }
   &.value-2 {
-    color: green;
+    color: $green;
   }
   &.value-3 {
-    color: red;
+    color: $red;
   }
   &.value-4 {
-    color: purple;
+    color: $purple;
   }
   &.value-5 {
-    color: maroon;
+    color: $maroon;
   }
   &.value-6 {
-    color: turquoise;
+    color: $turquoise;
   }
   &.value-7 {
-    color: black;
+    color: $black;
   }
   &.value-8 {
-    color: gray;
+    color: $gray;
   }
 }
