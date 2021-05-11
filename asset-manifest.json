@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/minesweeper/static/css/main.9d4f4080.chunk.css",
+    "main.js": "/minesweeper/static/js/main.a4013498.chunk.js",
+    "main.js.map": "/minesweeper/static/js/main.a4013498.chunk.js.map",
+    "runtime-main.js": "/minesweeper/static/js/runtime-main.ac5ff41f.js",
+    "runtime-main.js.map": "/minesweeper/static/js/runtime-main.ac5ff41f.js.map",
+    "static/js/2.ae7a0c62.chunk.js": "/minesweeper/static/js/2.ae7a0c62.chunk.js",
+    "static/js/2.ae7a0c62.chunk.js.map": "/minesweeper/static/js/2.ae7a0c62.chunk.js.map",
+    "index.html": "/minesweeper/index.html",
+    "static/css/main.9d4f4080.chunk.css.map": "/minesweeper/static/css/main.9d4f4080.chunk.css.map",
+    "static/js/2.ae7a0c62.chunk.js.LICENSE.txt": "/minesweeper/static/js/2.ae7a0c62.chunk.js.LICENSE.txt",
+    "static/media/app.scss": "/minesweeper/static/media/Windows-Regular.49264092.woff",
+    "static/media/numberDisplay.scss": "/minesweeper/static/media/digital-7.c34aa5f1.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ac5ff41f.js",
+    "static/js/2.ae7a0c62.chunk.js",
+    "static/css/main.9d4f4080.chunk.css",
+    "static/js/main.a4013498.chunk.js"
+  ]
+}
