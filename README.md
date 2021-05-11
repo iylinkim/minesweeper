@@ -1,43 +1,24 @@
-## Run this app
+# Minesweeper 💣
 
-    $ yarn start
+Minesweeper game with React and Typescript.
 
-Runs the app in the development mode
+## ⚒️ Technologies
+
+Project is created with:
+
+- React
+- Typescript
+- HTML5
+- SCSS
 
 #
 
-## Directory
+## 📑 Descriptions
 
-    public
-    .
-    ├── favicon.ico
-    ├── index.html
-    ├── logo192.png
-    └── manifest.json
-
-    src
-    .
-    ├── components
-    │   ├── App.tsx
-    │   ├── Button.tsx
-    │   ├── Header.tsx
-    │   └── NumberDisplay.tsx
-    ├── constants.ts
-    ├── index.scss
-    ├── index.tsx
-    ├── react-app-env.d.ts
-    ├── routes
-    │   ├── Home.tsx
-    │   └── Play.tsx
-    ├── scss
-    │   ├── app.scss
-    │   ├── button.scss
-    │   ├── common.scss
-    │   ├── home.scss
-    │   └── numberDisplay.scss
-    ├── styles
-    │   └── font
-    │       ├── Windows-Regular.woff
-    │       └── digital-7.woff
-    ├── types.ts
-    └── utils.ts
+- Use React hooks
+- Display times and leftover bombs on the top
+- Reset game by clicking the smile emoji
+- CSS Grid / Flexbox
+- SASS/SCSS mixins / variables
+- typescript Enum type / interface
+- typescript interface
